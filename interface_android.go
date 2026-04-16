@@ -161,10 +161,10 @@ type ipv6ZoneCache struct {
 	toName       map[int]string // interface index to its name
 }
 
-//go:linkname zoneCache net.zoneCache
-var zoneCache ipv6ZoneCache
+// Android does not expose net.zoneCache or socket.zoneCache.
+// Provide placeholders so the code compiles.
 
-//go:linkname zoneCacheX golang.org/x/net/internal/socket.zoneCache
+var zoneCache ipv6ZoneCache
 var zoneCacheX ipv6ZoneCache
 
 // update refreshes the network interface information if the cache was last
