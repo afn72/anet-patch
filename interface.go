@@ -7,6 +7,7 @@ import (
 	"net"
 )
 
+
 // Interfaces returns a list of the system's network interfaces.
 func Interfaces() ([]net.Interface, error) {
 	return net.Interfaces()
